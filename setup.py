@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 
 
 def read_file(filepath):
@@ -9,13 +9,13 @@ def read_file(filepath):
 
 
 setup(
-    name="django-seo2",
+    name="django-seo2-mod",
     version=VERSION,
     description="A framework for managing SEO metadata in Django.",
     long_description=read_file('README.rst'),
-    url="https://github.com/romansalin/django-seo2",
-    author="Roman Salin",
-    author_email="romansalin1990@gmail.com",
+    url="https://github.com/hazaard/django-seo2",
+    author="Artem Ivasyuk",
+    author_email="timorph@gmail.com",
     keywords="seo django framework",
     license="MIT",
     include_package_data=True,
