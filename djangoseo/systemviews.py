@@ -18,6 +18,7 @@ def get_view_names(seo_views):
             output.append(name)
         else:
             app_name = app.__name__.split(".")[:-1]
+            app_name_verbose = app_name[0]
             app_name.append("urls")
             try:
                 urls = importlib.import_module(".".join(app_name))
@@ -26,5 +27,5 @@ def get_view_names(seo_views):
             else:
                 for url in urls.urlpatterns:
                     if getattr(url, 'name', None):
-                        output.append(url.name)
+                        output.append("%s - %s" % (app_name_verbose, url.name))
     return output
